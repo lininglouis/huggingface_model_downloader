@@ -20,6 +20,18 @@ python run.py --model_name 'bert-base-cased'
 python run.py --model_name 'bert-base-cased'  --output_dir 'Some Directory'
 ```
 
+## Download API
+If you want to put it in your python code, below is an example
+```python
+from model import HuggingfaceDownloader
+
+def download_hf_model(model_name, output_dir='.'):
+    downloader = HuggingfaceDownloader(model_name = model_name, output_dir=output_dir)
+    downloader.run()
+    
+if __name__ == "__main__":
+    download_hf_model('bert-base-cased')
+```
 
 ## Tested Models
 three models has been tested for downloading using this script
